@@ -63,14 +63,13 @@ Roll numbers of students who have atleast one subscription:
 Hence, total is 13 students.
 
 """
-
-e = input()
-el = set(map(int,raw_input().split()))
-f = input()
-fl = set(map(int,raw_input().split()))
-
-u = el.union(fl)
-
-print u
-
-print len(u)
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+n1 = set(map(int,input().split()))
+m = int(input())
+m1 = set(map(int,input().split()))
+ans = n1.union(m1)
+count = 0
+for i in ans:
+    count = count + 1
+print(count)    
