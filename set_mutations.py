@@ -98,24 +98,12 @@ Sum of elements of set A after these operations is 38.
 
 
 """ 
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+input()
+set_1 = set(map(int,input().split()))
+for i in range(int(input())):
+    cmd = input().split()[0]
+    set_n = set(map(int,input().split()))
+    getattr(set_1,cmd)(set_n)
+print(sum(set_1))    
 
-LA = input()
-A = set(map(int,raw_input().split()))
-
-N = input()
-
-for i in xrange(N):
-	k = raw_input().split()
-	ktemp = set(map(int,raw_input().split()))
-	if k[0] == 'update':
-		A.update(ktemp)
-	elif k[0] == 'intersection_update':
-		A.intersection_update(ktemp)
-	elif k[0] == 'difference_update':
-		A.difference_update(ktemp)
-	elif k[0] == 'symmetric_difference_update':
-		A.symmetric_difference_update(ktemp)
-	else:
-		print 'Incorrect parameters'
-
-print A
